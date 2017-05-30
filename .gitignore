@@ -31,3 +31,7 @@
 *.out
 *.app
 *.bak
+Debug/
+.vs/
+*.opendb
+*.db
