@@ -1,0 +1,254 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CCBP                ICON    DISCARDABLE     "CCBP.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_CCBP MENU DISCARDABLE 
+BEGIN
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "面投影视角(&S)",              IDM_VIEW2
+        MENUITEM "透视视角(&T)",                IDM_VIEW1
+        MENUITEM SEPARATOR
+        MENUITEM "正面观察(&1)",                IDM_FIRSTVIEW
+        MENUITEM "侧面观察(&2)",                IDM_SECONDVIEW
+        MENUITEM "上面观察(&3)",                IDM_THIRDVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "停止(&P)",                    IDM_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&E)",                    IDM_EXIT
+    END
+    POPUP "参数(&P)"
+    BEGIN
+        MENUITEM "上限颜色(&H)",                IDM_COLOR1
+        MENUITEM "下限颜色(&L)",                IDM_COLOR2
+        MENUITEM SEPARATOR
+        MENUITEM "物理参数(&P)",                IDM_PHYSICS
+        MENUITEM "场景参数(&C)",                IDM_SCREEN
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)",                    IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_CCBP ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_CCBP,IDC_MYICON,14,9,20,20
+    CTEXT           "CCBP--两个柱电荷产生的电势能曲面",IDC_STATIC,49,23,119,
+                    35,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+IDD_PHYSICS DIALOG DISCARDABLE  100, 50, 310, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "物理参数设置"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,60,163,50,14
+    PUSHBUTTON      "取消",IDCANCEL,198,163,50,14
+    LTEXT           "电荷1的电量:(库仑)",IDC_STATIC,13,13,68,9
+    EDITTEXT        IDC_EDIT_Q1,15,24,23,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "-200",IDC_STATIC,41,39,16,10
+    SCROLLBAR       IDC_SCROLLBAR_Q1,44,25,247,12
+    CTEXT           "0",IDC_STATIC,158,41,19,8
+    LTEXT           "200",IDC_STATIC,286,40,16,9
+    LTEXT           "电荷2的电量:(库仑)",IDC_STATIC,13,53,73,9
+    EDITTEXT        IDC_EDIT_Q2,15,64,23,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "-200",IDC_STATIC,41,79,16,10
+    SCROLLBAR       IDC_SCROLLBAR_Q2,44,65,247,12
+    CTEXT           "0",IDC_STATIC,158,81,19,8
+    LTEXT           "200",IDC_STATIC,286,80,16,9
+    LTEXT           "电荷到中心的距离:(米)",IDC_STATIC,13,90,86,9
+    EDITTEXT        IDC_EDIT_D,15,101,23,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "30",IDC_STATIC,41,116,16,10
+    SCROLLBAR       IDC_SCROLLBAR_D,44,102,247,12
+    LTEXT           "130",IDC_STATIC,286,117,16,9
+    LTEXT           "电荷自生的半径:(米)",IDC_STATIC,13,125,80,9
+    EDITTEXT        IDC_EDIT_R,15,136,23,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "1",IDC_STATIC,41,151,16,10
+    SCROLLBAR       IDC_SCROLLBAR_R,44,137,247,12
+    LTEXT           "29",IDC_STATIC,286,152,16,9
+END
+
+IDD_VIEW DIALOG DISCARDABLE  100, 50, 352, 250
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "屏幕参数设置"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,115,229,50,14
+    PUSHBUTTON      "取消",IDCANCEL,177,229,50,14
+    LTEXT           "实坐标下图形的X方向半长度(米)",IDC_STATIC,19,15,113,9
+    EDITTEXT        IDC_EDIT_X,20,27,25,13,ES_AUTOHSCROLL | WS_DISABLED
+    SCROLLBAR       IDC_SCROLLBAR_X,56,27,276,13
+    LTEXT           "50",IDC_STATIC,57,42,23,13
+    LTEXT           "200",IDC_STATIC,315,43,19,10
+    LTEXT           "实坐标下图形的Y方向半长度(米)",IDC_STATIC,19,58,113,9
+    EDITTEXT        IDC_EDIT_Y,20,70,25,13,ES_AUTOHSCROLL | WS_DISABLED
+    SCROLLBAR       IDC_SCROLLBAR_Y,56,70,276,13
+    LTEXT           "50",IDC_STATIC,57,85,23,13
+    LTEXT           "200",IDC_STATIC,315,86,19,10
+    LTEXT           "实坐标下图形的X方向的线数",IDC_STATIC,19,101,113,9
+    EDITTEXT        IDC_EDIT_CX,20,113,25,13,ES_AUTOHSCROLL | WS_DISABLED
+    SCROLLBAR       IDC_SCROLLBAR_CX,56,113,276,13
+    LTEXT           "11",IDC_STATIC,57,128,23,11
+    LTEXT           "201",IDC_STATIC,315,129,19,10
+    LTEXT           "实坐标下图形的半长度(米)",IDC_STATIC,19,142,113,9
+    EDITTEXT        IDC_EDIT_CY,20,154,25,13,ES_AUTOHSCROLL | WS_DISABLED
+    SCROLLBAR       IDC_SCROLLBAR_CY,56,154,276,13
+    LTEXT           "11",IDC_STATIC,57,169,23,13
+    LTEXT           "201",IDC_STATIC,315,170,19,10
+    LTEXT           "图形的精细度  ( 越大效果越好,但机器要求比较高,建议设为101 )",
+                    IDC_STATIC,19,184,275,9
+    EDITTEXT        IDC_EDIT_P,20,196,25,13,ES_AUTOHSCROLL | WS_DISABLED
+    SCROLLBAR       IDC_SCROLLBAR_P,56,196,276,13
+    LTEXT           "51",IDC_STATIC,57,211,23,13
+    LTEXT           "501",IDC_STATIC,315,212,19,10
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_PHYSICS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "CCBP--两个柱电荷产生的电势能曲面"
+    IDS_HELLO               "Hello World!"
+    IDC_CCBP                "CCBP"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
